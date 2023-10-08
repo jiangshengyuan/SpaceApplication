@@ -18,6 +18,7 @@
         <project-encoding>UTF-8</project-encoding>
         <java-version>17</java-version>
         <springboot-version>3.1.4</springboot-version>
+        <mariadb-java-client-version>3.2.0</mariadb-java-client-version>
         <snakeyaml-version>2.0</snakeyaml-version>
         <mybatis-version>3.0.2</mybatis-version>
         <lombok-version>1.18.28</lombok-version>
@@ -44,6 +45,11 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-data-redis</artifactId>
                 <version>${springboot-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mariadb.jdbc</groupId>
+                <artifactId>mariadb-java-client</artifactId>
+                <version>$｛mariadb-java-client-version｝</version>
             </dependency>
             <dependency>
                 <groupId>org.yaml</groupId>
