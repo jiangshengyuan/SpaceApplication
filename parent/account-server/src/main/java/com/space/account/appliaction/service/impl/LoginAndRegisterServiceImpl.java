@@ -13,7 +13,6 @@ public class LoginAndRegisterServiceImpl implements LoginAndRegisterService {
     @Override
     public String loginByPassword(LoginAndRegisterDTO loginAndRegisterDTO) {
         if ("0".equals(loginAndRegisterDTO.getType())) {
-
         }
         if ("1".equals(loginAndRegisterDTO.getType())) {
 
