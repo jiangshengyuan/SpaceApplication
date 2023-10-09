@@ -17,10 +17,9 @@
     <properties>
         <project-encoding>UTF-8</project-encoding>
         <java-version>17</java-version>
-        <springboot-version>3.1.4</springboot-version>
-        <mariadb-java-client-version>3.2.0</mariadb-java-client-version>
+        <springboot-version>3.1.0</springboot-version>
         <snakeyaml-version>2.0</snakeyaml-version>
-        <mybatis-version>3.0.2</mybatis-version>
+        <mybatis-plus-version>3.5.3.2</mybatis-plus-version>
         <lombok-version>1.18.28</lombok-version>
         <commons-lang3-version>3.12.0</commons-lang3-version>
     </properties>
@@ -38,6 +37,17 @@
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter</artifactId>
+                <version>${springboot-version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.yaml</groupId>
+                        <artifactId>snakeyaml</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-test</artifactId>
                 <version>${springboot-version}</version>
             </dependency>
@@ -49,7 +59,7 @@
             <dependency>
                 <groupId>org.mariadb.jdbc</groupId>
                 <artifactId>mariadb-java-client</artifactId>
-                <version>$｛mariadb-java-client-version｝</version>
+                <version>${springboot-version}</version>
             </dependency>
             <dependency>
                 <groupId>org.yaml</groupId>
@@ -57,9 +67,9 @@
                 <version>${snakeyaml-version}</version>
             </dependency>
             <dependency>
-                <groupId>org.mybatis.spring.boot</groupId>
-                <artifactId>mybatis-spring-boot-starter</artifactId>
-                <version>${mybatis-version}</version>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus-version}</version>
             </dependency>
             <dependency>
                 <groupId>org.projectlombok</groupId>
