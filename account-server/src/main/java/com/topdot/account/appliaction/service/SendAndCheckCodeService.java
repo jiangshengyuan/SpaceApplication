@@ -1,6 +1,6 @@
 package com.topdot.account.appliaction.service;
 
-public interface CheckCodeService {
+public interface SendAndCheckCodeService {
     /*发送手机验证码*/
     Boolean sendCheckCodeToPhone(String phone);
     /*发送邮箱验证码*/

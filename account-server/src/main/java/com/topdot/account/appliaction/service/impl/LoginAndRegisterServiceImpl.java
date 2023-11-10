@@ -1,7 +1,8 @@
 package com.topdot.account.appliaction.service.impl;
 
-import com.topdot.account.appliaction.service.CheckCodeService;
+import com.topdot.account.appliaction.service.SendAndCheckCodeService;
 import com.topdot.account.appliaction.service.LoginAndRegisterService;
+import com.topdot.account.interfaces.dto.AccountInfo;
 import com.topdot.account.interfaces.dto.LoginAndRegisterDTO;
 import jakarta.annotation.Resource;
 import org.springframework.stereotype.Repository;
@@ -9,7 +10,8 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class LoginAndRegisterServiceImpl implements LoginAndRegisterService {
     @Resource
-    CheckCodeService checkCodeService;
+    SendAndCheckCodeService sendAndCheckCodeService;
+
     @Override
     public String loginByPassword(LoginAndRegisterDTO loginAndRegisterDTO) {
         if ("0".equals(loginAndRegisterDTO.getType())) {
@@ -39,12 +41,17 @@ public class LoginAndRegisterServiceImpl implements LoginAndRegisterService {
     @Override
     public Boolean sendCheckCode(LoginAndRegisterDTO loginAndRegisterDTO) {
         if ("2".equals(loginAndRegisterDTO.getType())) {
-            checkCodeService.sendCheckCodeToPhone(loginAndRegisterDTO.getPhone());
+            sendAndCheckCodeService.sendCheckCodeToPhone(loginAndRegisterDTO.getPhone());
         }
         if ("3".equals(loginAndRegisterDTO.getType())) {
-            checkCodeService.sendCheckCodeToMail(loginAndRegisterDTO.getMail());
+            sendAndCheckCodeService.sendCheckCodeToMail(loginAndRegisterDTO.getMail());
         }
         return Boolean.FALSE;
+    }
+
+    @Override
+    public Boolean register(LoginAndRegisterDTO loginAndRegisterDTO, AccountInfo accountInfo) {
+        return null;
     }
 
 }

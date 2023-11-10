@@ -1,5 +1,6 @@
 package com.topdot.account.appliaction.service;
 
+import com.topdot.account.interfaces.dto.AccountInfo;
 import com.topdot.account.interfaces.dto.LoginAndRegisterDTO;
 
 public interface LoginAndRegisterService {
@@ -19,4 +20,6 @@ public interface LoginAndRegisterService {
      * 发送验证码：2：手机验证码，3：邮箱验证码
      */
     Boolean sendCheckCode(LoginAndRegisterDTO loginAndRegisterDTO);
+
+    Boolean register(LoginAndRegisterDTO loginAndRegisterDTO, AccountInfo accountInfo);
 }

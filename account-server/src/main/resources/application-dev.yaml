@@ -29,6 +29,12 @@ spring:
     mapper-locations: classpath:mapper/*Mapper.xml
     configuration:
       map-underscore-to-camel-case: true
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+      password: 123456
+      client-name: lettuce
 eureka:
   client:
     service-url:

@@ -1,10 +1,10 @@
 package com.topdot.account.appliaction.service.impl;
 
-import com.topdot.account.appliaction.service.CheckCodeService;
+import com.topdot.account.appliaction.service.SendAndCheckCodeService;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class CheckCodeServiceImpl implements CheckCodeService {
+public class SendAndCheckCodeServiceImpl implements SendAndCheckCodeService {
     @Override
     public Boolean sendCheckCodeToPhone(String phone) {
         return null;
