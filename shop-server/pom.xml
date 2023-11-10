@@ -3,12 +3,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.topdot.parent</groupId>
-        <artifactId>parent</artifactId>
+        <groupId>com.topdot.space</groupId>
+        <artifactId>space-parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
     </parent>
-    <groupId>com.topdot.shop</groupId>
     <artifactId>shop-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>shop-server</name>
