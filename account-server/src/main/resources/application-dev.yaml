@@ -11,6 +11,13 @@ server:
 spring:
   application:
     name: account-server
+  zipkin:
+    base-url: http://127.0.0.1:9411
+    sender:
+      type: web
+    sleuth:
+      sampler:
+        probability: 1.0
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
     url: jdbc:mariadb://127.0.0.1:3306/t_account

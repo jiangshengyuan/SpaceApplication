@@ -30,6 +30,7 @@
         <snakeyaml-version>2.0</snakeyaml-version>
         <mybatis-plus-version>3.5.3.2</mybatis-plus-version>
         <lombok-version>1.18.28</lombok-version>
+        <zipkin-version>3.1.9</zipkin-version>
         <commons-lang3-version>3.12.0</commons-lang3-version>
     </properties>
     <dependencyManagement>
@@ -123,6 +124,16 @@
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatis-plus-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-sleuth-zipkin</artifactId>
+                <version>${zipkin-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-sleuth</artifactId>
+                <version>${zipkin-version}</version>
             </dependency>
             <dependency>
                 <groupId>org.projectlombok</groupId>
