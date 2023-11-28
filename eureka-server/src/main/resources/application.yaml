@@ -1,12 +1,10 @@
 server:
-  undertow:
-    max-http-post-size: -1B
-    threads:
-      io: 4
-      worker: 40
-    buffer-size: 1024
-    direct-buffers: true
   port: 8761
+spring:
+  cloud:
+    load balancer:
+      cache:
+        enabled: false
 eureka:
   instance:
     hostname: 127.0.0.1
