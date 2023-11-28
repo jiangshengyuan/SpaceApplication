@@ -39,6 +39,8 @@ create table store
 (
     id                bigint primary key not null comment '店铺id',
     collection_amount int(9) comment '收藏量',
+    create_time        datetime,
+    update_time        datetime,
     status            char(1)            not null comment '是否有效'
 );
 
@@ -49,6 +51,8 @@ create table product
     id                 bigint primary key not null,
     store_id           bigint             not null comment '',
     detail_description varchar(1024)      not null comment '',
+    create_time        datetime,
+    update_time        datetime,
     status             char(1)            not null comment '是否有效'
 );
 -- 商品SKU表
@@ -59,6 +63,8 @@ create table product_sku
     store_id   bigint             not null comment '店铺id',
     product_id bigint             not null comment '商品id',
     price      decimal(10, 2)     not null comment '价格',
+    create_time        datetime,
+    update_time        datetime,
     status     char(1)            not null comment '是否有效'
 );
 
@@ -69,6 +75,8 @@ create table product_sku_stork
     id     bigint primary key not null,
     sku_id bigint             not null comment 'sku id',
     stork  bigint             not null comment '库存',
+    create_time        datetime,
+    update_time        datetime,
     status char(1)            not null comment '是否有效'
 );
 
@@ -80,6 +88,8 @@ create table product
     serial_id    int                not null comment '序号',
     product_id   bigint             not null comment '商品id',
     picture_path varchar(32)        not null comment '图片地址',
+    create_time        datetime,
+    update_time        datetime,
     status       char(1)            not null comment '是否有效'
 );
 -- 商品品类表
@@ -95,6 +105,8 @@ create table product_category
     three_level_category_num  char(3)            not null comment '三级目录编号',
     four_level_category_name  varchar(32)        not null comment '四级目录名(限制使用)',
     four_level_category_num   char(4)            not null comment '四级目录编号(限制使用)',
+    create_time        datetime,
+    update_time        datetime,
     status                    char(1)            not null comment '是否有效'
 );
 -- 购物车表
@@ -104,5 +116,7 @@ create table shopping_car
     id     bigint primary key not null,
     sku_id bigint             not null comment 'sku id',
     amount int                not null comment '数量',
+    create_time        datetime,
+    update_time        datetime,
     status char(1)            not null comment '是否有效'
 );
