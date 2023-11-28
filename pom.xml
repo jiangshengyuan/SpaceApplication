@@ -31,6 +31,7 @@
         <mybatis-plus-version>3.5.3.2</mybatis-plus-version>
         <lombok-version>1.18.28</lombok-version>
         <zipkin-version>3.1.9</zipkin-version>
+        <spring-cloud-gateway-version>4.0.8</spring-cloud-gateway-version>
         <commons-lang3-version>3.12.0</commons-lang3-version>
     </properties>
     <dependencyManagement>
@@ -134,6 +135,11 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-sleuth</artifactId>
                 <version>${zipkin-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-gateway</artifactId>
+                <version>${spring-cloud-gateway-version}</version>
             </dependency>
             <dependency>
                 <groupId>org.projectlombok</groupId>
