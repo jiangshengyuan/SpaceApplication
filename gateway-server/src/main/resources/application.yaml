@@ -1,0 +1,9 @@
+server:
+  undertow:
+    max-http-post-size: -1B
+    threads:
+      io: 4
+      worker: 40
+    buffer-size: 1024
+    direct-buffers: true
+  port: 10010

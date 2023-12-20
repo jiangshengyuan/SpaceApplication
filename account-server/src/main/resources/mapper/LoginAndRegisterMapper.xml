@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="com.topdot.account.infrastructure.mapper.LoginAndRegisterMapper">
+    <insert id="insertLoginInfo" parameterType="com.topdot.account.infrastructure.entity.LoginAndRegisterEntity">
+        insert into login_info
+    </insert>
+</mapper>

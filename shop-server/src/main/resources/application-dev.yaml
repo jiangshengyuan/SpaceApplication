@@ -1,0 +1,25 @@
+server:
+  port: 11080
+  servlet:
+    context-path: /shop
+spring:
+  application:
+    name: shop-server
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://127.0.0.1:3306/t_account
+    username: root
+    password: 123456
+    hikari:
+      pool-name: account-hikari-mariadb
+      minimum-idle: 5
+      maximum-pool-size: 10
+      idle-timeout: 180000
+      max-lifetime: 180000
+      auto-commit: true
+      connection-timeout: 300000
+      connection-test-query: SELECT 1
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+  configuration:
+    map-underscore-to-camel-case: true
