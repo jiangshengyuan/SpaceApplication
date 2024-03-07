@@ -1,3 +1,4 @@
+drop schema if exists t_account;
 create database t_account;
 use t_account;
 -- 登录信息表
@@ -49,7 +50,7 @@ drop table if exists t_account.user_role;
 create table t_account.user_role
 (
     id      bigint primary key not null,
-    user_id bigint primary key not null,
+    user_id bigint             not null,
     role_id bigint             not null,
     status  char(1)            not null comment '是否有效：0：用户注销，1:使用中，X：违规封禁，Z：系统自动清除'
 );

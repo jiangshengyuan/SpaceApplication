@@ -2,6 +2,7 @@ package com.topdot.account.interfaces.facade;
 
 import com.topdot.account.infrastructure.constant.ResponseCode;
 import com.topdot.account.infrastructure.constant.ResponseMessage;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;

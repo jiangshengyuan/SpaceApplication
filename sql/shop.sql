@@ -1,4 +1,6 @@
+drop schema if exists t_shop;
 create database t_shop;
+use t_shop;
 -- 订单表
 drop table if exists t_shop.order;
 create table order_detail
