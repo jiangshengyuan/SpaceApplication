@@ -4,12 +4,12 @@ import com.topdot.account.appliaction.service.LoginAndRegisterService;
 import com.topdot.account.appliaction.service.SendAndCheckCodeService;
 import com.topdot.account.interfaces.dto.AccountInfo;
 import com.topdot.account.interfaces.dto.LoginAndRegisterDTO;
-import jakarta.annotation.Resource;
 import lombok.NonNull;
-import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.annotation.Resource;
 
 @RestController
 public class LoginAndRegisterApi {

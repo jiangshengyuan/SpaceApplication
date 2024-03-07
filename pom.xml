@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.1.6</version>
+        <version>2.7.18</version>
     </parent>
     <groupId>com.topdot.space</groupId>
     <artifactId>space-parent</artifactId>
@@ -23,18 +23,22 @@
     </modules>
     <properties>
         <project-encoding>UTF-8</project-encoding>
-        <java-version>17</java-version>
-        <spring-cloud.version>4.0.4</spring-cloud.version>
-        <eureka.version>4.0.3</eureka.version>
+        <java-version>8</java-version>
+        <spring-cloud.version>3.1.8</spring-cloud.version>
+        <eureka.version>3.1.8</eureka.version>
+        <openfeign.version>3.1.8</openfeign.version>
         <zipkin.version>3.1.6</zipkin.version>
-        <spring-boot.version>3.1.6</spring-boot.version>
+        <spring-boot.version>2.7.18</spring-boot.version>
         <snakeyaml.version>2.0</snakeyaml.version>
-        <mariadb-java-client.version>3.2.0</mariadb-java-client.version>
-        <slf4j-api.version>2.0.7</slf4j-api.version>
-        <mybatis.version>3.0.2</mybatis.version>
+        <mariadb-java-client.version>3.1.4</mariadb-java-client.version>
+        <slf4j-api.version>1.7.36</slf4j-api.version>
+        <mybatis.version>2.3.2</mybatis.version>
         <lombok.version>1.18.28</lombok.version>
         <zipkin.version>3.1.9</zipkin.version>
         <commons-lang3.version>3.12.0</commons-lang3.version>
+        <gson.version>2.10.1</gson.version>
+        <fastjson.version>2.0.42</fastjson.version>
+        <auth0.version>4.3.0</auth0.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -57,7 +61,12 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-openfeign</artifactId>
-                <version>${spring-cloud.version}</version>
+                <version>${openfeign.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-fileupload</groupId>
+                <artifactId>commons-fileupload</artifactId>
+                <version>1.5</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
@@ -80,6 +89,11 @@
                 <version>${eureka.version}</version>
             </dependency>
             <!-- spring-boot -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
@@ -147,19 +161,19 @@
                 <version>${commons-lang3.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.auth0</groupId>
-                <artifactId>java-jwt</artifactId>
-                <version>4.3.0</version>
-            </dependency>
-            <dependency>
                 <groupId>com.google.code.gson</groupId>
                 <artifactId>gson</artifactId>
-                <version>2.10.1</version>
+                <version>${gson.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
-                <version>2.0.42</version>
+                <version>${fastjson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.auth0</groupId>
+                <artifactId>java-jwt</artifactId>
+                <version>${auth0.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
