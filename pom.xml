@@ -20,6 +20,7 @@
         <module>shop-server</module>
         <module>eureka-server</module>
         <module>gateway-server</module>
+        <module>space-common</module>
     </modules>
     <properties>
         <project-encoding>UTF-8</project-encoding>
