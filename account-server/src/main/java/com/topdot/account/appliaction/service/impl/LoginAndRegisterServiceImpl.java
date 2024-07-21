@@ -1,11 +1,12 @@
 package com.topdot.account.appliaction.service.impl;
 
-import com.topdot.account.appliaction.service.SendAndCheckCodeService;
 import com.topdot.account.appliaction.service.LoginAndRegisterService;
+import com.topdot.account.appliaction.service.SendAndCheckCodeService;
 import com.topdot.account.interfaces.dto.AccountInfo;
 import com.topdot.account.interfaces.dto.LoginAndRegisterDTO;
-import jakarta.annotation.Resource;
 import org.springframework.stereotype.Repository;
+
+import javax.annotation.Resource;
 
 @Repository
 public class LoginAndRegisterServiceImpl implements LoginAndRegisterService {
