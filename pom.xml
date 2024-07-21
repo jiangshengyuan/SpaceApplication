@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.1.6</version>
+        <version>3.3.1</version>
     </parent>
     <groupId>com.topdot.space</groupId>
     <artifactId>space-parent</artifactId>
@@ -26,15 +26,14 @@
         <java-version>17</java-version>
         <spring-cloud.version>4.0.4</spring-cloud.version>
         <eureka.version>4.0.3</eureka.version>
-        <nacos.version>0.9.0.RELEASE</nacos.version>
-        <zipkin.version>3.1.6</zipkin.version>
-        <spring-boot.version>3.1.6</spring-boot.version>
-        <snakeyaml.version>2.0</snakeyaml.version>
+        <nacos.version>2023.0.1.2</nacos.version>
+        <zipkin.version>3.1.11</zipkin.version>
+        <spring-boot.version>3.3.1</spring-boot.version>
+        <snakeyaml.version>2.2</snakeyaml.version>
         <mariadb-java-client.version>3.2.0</mariadb-java-client.version>
         <slf4j-api.version>2.0.7</slf4j-api.version>
         <mybatis.version>3.0.2</mybatis.version>
-        <lombok.version>1.18.28</lombok.version>
-        <zipkin.version>3.1.9</zipkin.version>
+        <lombok.version>1.18.34</lombok.version>
         <commons-lang3.version>3.12.0</commons-lang3.version>
     </properties>
     <dependencyManagement>
